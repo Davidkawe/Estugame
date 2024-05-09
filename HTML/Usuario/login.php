@@ -11,21 +11,45 @@
         <script src="script.js"></script>
         <div class="container" id="container">
             <div class="form-container empresas-container">
-                <form action="#">
+                <form action="validar_sesion_empresa.php" method="post">
                     <h1>Cuenta de Empresa</h1>
                     <input type="email" id="email" placeholder="Email" required/>
                     <input type="password" placeholder="Password" required/>
                     <button>Inicia Sesión</button>
                     <p>¿Acabas de empezar? <a class="Registrate" href="../Registro/registro.html">Registrate</a></p>
+                    <?php
+                    if(isset($_GET["control"])) { 
+                        $userControl = $_GET['control'];
+                        if($userControl != null){
+                            if($userControl == 2){
+                                echo"<h4>Hay algun problema con el correo </h4>";
+                            }elseif($userControl == 3){
+                                echo"<h4>Hay algun problema con la contraseña</h4>";
+                            }
+                        }
+                    }
+                    ?>
                 </form>
             </div>
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form action="validar_sesion.php" method="post">
                     <h1>Inicia Sesión</h1>
                     <input type="email" id="email" placeholder="Email" required/>
                     <input type="password" placeholder="Password" required/>
                     <button>Inicia Sesión</button>
                     <p>¿No tienes una cuenta? <a class="Registrate" href="../Registro/registro.html">Registrate</a></p>
+                    <?php
+                    if(isset($_GET["control"])) { 
+                        $userControl = $_GET['control'];
+                        if($userControl != null){
+                            if($userControl == 2){
+                                echo"<h4>Hay algun problema con el correo </h4>";
+                            }elseif($userControl == 3){
+                                echo"<h4>Hay algun problema con la contraseña</h4>";
+                            }
+                        }
+                    }
+                    ?>
                 </form>
             </div>
             <!--Este contenedor cambia de lado tapando -->
