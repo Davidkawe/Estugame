@@ -11,31 +11,31 @@
         <script src="script.js"></script>
         <div class="container" id="container">
             <div class="form-container empresas-container">
-                <form action="#">
+                <form action="validar_insercion_empresa.php" method="post">
                     <h1>Crea tu Empresa</h1>
-                    <input type="text" placeholder="Nombre de Empresa" id="NomEmpresa" required/>
-                    <input type="email" id="email" placeholder="Email" required/>
-                    <input type="password" placeholder="Contraseña" required/>
-                    <input type="text" placeholder="Telefono" id="telefono" required/>
-                    <input type="text" placeholder="NIF" id="nif" required/>
+                    <input type="text" placeholder="Nombre de Empresa" id="NomEmpresa" name="nombreem" required/>
+                    <input type="email" id="email" placeholder="Email" name="mailem" required/>
+                    <input type="password" placeholder="Contraseña" name="contrasenaem" required/>
+                    <input type="text" placeholder="Telefono" id="telefono" name="telefonoem" required/>
+                    <input type="text" placeholder="NIF" id="nif" name="nif" required/>
                     <button onclick="redireccionar()" id="RegEmpresa">Registrate</button>
                     <p>¿Ya tienes cuenta? <a class="Registrate" href="../Usuario/login.html">Inicia Sesión</a></p>
                 </form>
             </div>
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form action="validar_insercion.php" method="post">
                     <h1>Registrate</h1>
                     <div class="A">
-                        <input type="text" placeholder="Nombre de Usuario" id="usuario" class="ab" required/>
-                        <input type="password" placeholder="Contraseña" required/>
+                        <input type="text" placeholder="Nombre de Usuario" id="usuario" name="usuario" class="ab" required/>
+                        <input type="password" placeholder="Contraseña" name="contrasena" required/>
                     </div>
                     <div class="junto">
-                        <input type="text" placeholder="Nombre" id="nombre" class="identidad" required/>
-                        <input type="text" placeholder="Apellido" id="apellido" required/>
+                        <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="identidad" required/>
+                        <input type="text" placeholder="Apellido" id="apellido" name="primApellido" required/>
                     </div>
                     <div class="B">
-                        <input type="email" id="email" placeholder="Email" class="ba" required/>
-                        <input type="text" placeholder="Telefono" id="telefono" required/>
+                        <input type="email" id="email" placeholder="Email" class="ba" name="mail" required/>
+                        <input type="text" placeholder="Telefono" id="telefono" name="telefono" required/>
                     </div>
                     <button id="RegUsuario">Registrate</button>
                 <p>¿Ya tienes cuenta? <a class="Registrate" href="../Usuario/login.html">Inicia Sesión</a></p>
