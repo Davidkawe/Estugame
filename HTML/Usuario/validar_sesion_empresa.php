@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "SELECT id FROM empresa WHERE contraseña='".$contra."'";
         $res = $conn->query($sql);
         if($res->num_rows == 1){
-            header("Location: prueba.php");
+            header("Location: ../ENCUESTAS/index.html");
         }else{
             header("Location: login.php?control=5");
         }
