@@ -11,13 +11,13 @@
         <script src="script.js"></script>
         <div class="container" id="container">
             <div class="form-container empresas-container">
-                <form action="#">
+                <form action="validar_insercion_empresa.php" method="post">
                     <h1>Crea tu Empresa</h1>
-                    <input type="text" placeholder="Nombre de Empresa" id="NomEmpresa" required/>
-                    <input type="email" id="email" placeholder="Email" required/>
-                    <input type="password" placeholder="Contraseña" required/>
-                    <input type="text" placeholder="Telefono" id="telefono" required/>
-                    <input type="text" placeholder="NIF" id="nif" required/>
+                    <input type="text" placeholder="Nombre de Empresa" id="NomEmpresa" name="nombreem" required/>
+                    <input type="email" id="email" placeholder="Email" name="mailem" required/>
+                    <input type="password" placeholder="Contraseña" name="contrasenaem" required/>
+                    <input type="text" placeholder="Telefono" id="telefono" name="telefonoem" required/>
+                    <input type="text" placeholder="NIF" id="nif" name="nif" required/>
                     <button onclick="redireccionar()" id="RegEmpresa">Registrate</button>
                     <p>¿Ya tienes cuenta? <a class="Registrate" href="../Usuario/login.html">Inicia Sesión</a></p>
                 </form>
