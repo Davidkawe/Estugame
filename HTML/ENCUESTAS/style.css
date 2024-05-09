@@ -111,6 +111,17 @@ body {
         max-width:350px;
         z-index: 10;
     }
+
+    .menu:after {
+        content: "";
+        position: absolute;
+        top: 0.1em;
+        left: 10.2em;
+        width: 1.5em;
+        height: 0.2em;
+        border-top: 0.6em double #fff;
+        border-bottom: 0.2em solid #fff;
+    }
     
     ul {
         list-style: none;
@@ -168,6 +179,10 @@ body {
         opacity:1;
         -webkit-transform:rotate(0);
                 transform:rotate(0);
+    }
+
+    .hint {
+        text-align: center;
     }
 }
 
@@ -290,6 +305,7 @@ body {
         color: #d3686b;
         text-decoration: none;
         line-height: 1.5em;
+        font-size: 37px;
     }
 
     .menu ul {
@@ -348,6 +364,16 @@ body {
         cursor: pointer;
         transition: 0.5s;
     }
+    
+    .button-container > button:first-child {
+        place-self: start;
+        --mask: conic-gradient(from -135deg at right, #0000, #000 1deg 89deg, #0000 90deg) 50%/100% calc(2*32px) repeat-y;
+    }
+
+    .button-container > button:last-child {
+        place-self: end;
+        --mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 50% calc(50% - 32px)/100% calc(2*32px) repeat-y;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -361,28 +387,28 @@ body {
         cursor: pointer;
         transition: 0.5s;
     }
+
+    .button-container > button:first-child {
+        place-self: start;
+        clip-path: polygon(calc(2* 32px) 0, 100% 0, 100% 100%, 0 100%);
+        --mask: conic-gradient(from -135deg at right, #0000, #000 1deg 89deg, #0000 90deg) 50%/100% calc(2*32px) repeat-y;
+    }
+
+    .button-container > button:last-child {
+        place-self: end;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 2*32px) 100%, 0 100%);
+        --mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 50% calc(50% - 32px)/100% calc(2*32px) repeat-y;
+    }
 }
 
 .button-container > button:hover {
     width: calc(360px/2);
 }
 
-.button-container > button:first-child {
-    place-self: start;
-    clip-path: polygon(calc(2* 32px) 0, 100% 0, 100% 100%, 0 100%);
-    --mask: conic-gradient(from -135deg at right, #0000, #000 1deg 89deg, #0000 90deg) 50%/100% calc(2*32px) repeat-y;
-}
-
-.button-container > button:last-child {
-    place-self: end;
-    clip-path: polygon(0 0, 100% 0, calc(100% - 2*32px) 100%, 0 100%);
-    --mask: conic-gradient(from 45deg at left, #0000, #000 1deg 89deg, #0000 90deg) 50% calc(50% - 32px)/100% calc(2*32px) repeat-y;
-}
-
 #negativeBtn {
-    background-color: #d30015;
+    background-color: #ff6961;
 }
 
 #positiveBtn {
-    background-color: #00d340;
+    background-color: #a0d995;
 }
