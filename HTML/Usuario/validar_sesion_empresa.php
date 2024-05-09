@@ -14,22 +14,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $mailem=$_POST['emailem'];
     $contra= $_POST['passwordem'];
     
-    $sql = "SELECT id FROM empresa WHERE mail = '".$mailem."'";
-    $control = $conn->query($sql);
+    $sql = "SELECT mail FROM empresa WHERE mail='".$mailem."'";
+    $res = $conn->query($sql);
 
-    
-    if($control->num_rows == 1){
+
+
+    if($res->num_rows == 1){
         $sql = "SELECT id FROM empresa WHERE contraseña='".$contra."'";
-        $control = $conn->query($sql);
-        if($control->num_rows == 1){
+        $res = $conn->query($sql);
+        if($res->num_rows == 1){
             header("Location: prueba.php");
         }else{
-            header("Location: login.php?control=3");
+            header("Location: login.php?control=5");
         }
         
     }else{
         
-        header("Location: login.php?control=2");
+        header("Location: login.php?control=4");
     }
 
 } 
