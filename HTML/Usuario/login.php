@@ -13,8 +13,8 @@
             <div class="form-container empresas-container">
                 <form action="validar_sesion_empresa.php" method="post">
                     <h1>Cuenta de Empresa</h1>
-                    <input type="email" id="email" placeholder="Email" required/>
-                    <input type="password" placeholder="Password" required/>
+                    <input type="email" id="emailem" name="emailem" placeholder="Email" required/>
+                    <input type="password" placeholder="Password" name="passwordem" id="passwordem"required/>
                     <button>Inicia Sesión</button>
                     <p>¿Acabas de empezar? <a class="Registrate" href="../Registro/registro.html">Registrate</a></p>
                     <?php
@@ -34,8 +34,9 @@
             <div class="form-container sign-in-container">
                 <form action="validar_sesion.php" method="post">
                     <h1>Inicia Sesión</h1>
-                    <input type="email" id="email" placeholder="Email" required/>
-                    <input type="password" placeholder="Password" required/>
+                    <input type="email" id="email" name="email" placeholder="Email" required/>
+                    <input type="password" id="password" name="password" placeholder="Password" required/>
+                    <button>Inicia Sesión</button>
                     <button>Inicia Sesión</button>
                     <p>¿No tienes una cuenta? <a class="Registrate" href="../Registro/registro.html">Registrate</a></p>
                     <?php
