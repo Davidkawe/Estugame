@@ -12,12 +12,6 @@
         <header>
             <div class="container">
                 <h1>Perfil de Empresa</h1>
-                <nav>
-                    <ul>
-                        <li><a href="../Home/indext.html">Inicio</a></li>
-                        <li><a href="../ENCUESTAS/index.html">Encuestas</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 

@@ -17,7 +17,6 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .header {
@@ -92,11 +91,46 @@ body {
 
 .about {
   background-color: #f3e9d1; /* Color de fondo del apartado "Quiénes Somos" */
-  padding: 50px 0;
+  padding: 50px;
 }
 
 .about h2 {
   color: #742c64; /* Color del texto del encabezado */
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+
+}
+
+.about p{
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.about ul {
+  list-style: none;
+  padding-left: 15%;
+  line-height: 1.5;
+}
+
+.caracteristicas {
+  list-style: none;
+  padding: 0;
+}
+
+.caracteristica {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.caracteristica i {
+  float: left;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #007bff;
 }
 
 .contact {
@@ -111,6 +145,7 @@ body {
 .contact p{
   background-color: #f3e9d1;
   border-radius: 20px 20px 20px 20px;
+  padding: 20px;
 }
 
 .footer {

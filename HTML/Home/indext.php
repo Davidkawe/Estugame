@@ -10,28 +10,65 @@
     <header class="header">
       <div class="container">
         <h1>Stugame</h1>
-        <p class="slogan">Vota por tus características favoritas de los juegos</p>
-        <nav class="menu">
-          <ul>
-            <li><a href="../Registro/registro.html">Registro</a></li>
-            <li><a href="../Usuario/login.html">Iniciar Sesión</a></li>
-          </ul>
-        </nav>
+        <p class="slogan"> Tu voz en el mundo de los videojuegos</p>
       </div>
     </header>
 
     <main class="main">
-      <a class="start-button" href="../ENCUESTAS/index.html">Start</a>
+      <a class="start-button" href="../Usuario/login.php">Start</a>
     </main>
 
     <section class="about">
       <div class="container">
-        <h2>¿Quiénes Somos?</h2>
-        <p>Somos una plataforma dedicada a recopilar la opinión de los usuarios sobre las nuevas características de los juegos.</p>
+        <h2>¿Quiénes somos?</h2>
+
+        <p>**Estugame** es una plataforma online donde los jugadores de videojuegos pueden compartir sus opiniones y experiencias a través de encuestas rápidas y divertidas. Nuestra misión es crear una comunidad vibrante donde los gamers puedan conectar entre sí, expresarse libremente y tener un impacto real en la industria de los videojuegos.</p>
+
+        <h3>¿Qué nos hace únicos?</h3>
+
+        <ul class="caracteristicas">
+          <li class="caracteristica">
+            <i class="fas fa-user-friends"></i>
+            <span>Enfocado en los jugadores</span>
+          </li>
+          <li class="caracteristica">
+            <i class="fas fa-poll"></i>
+            <span>Encuestas rápidas y divertidas</span>
+          </li>
+          <li class="caracteristica">
+            <i class="fas fa-chart-bar"></i>
+            <span>Impacto real</span>
+          </li>
+          <li class="caracteristica">
+            <i class="fas fa-users"></i>
+            <span>Comunidad vibrante</span>
+          </li>
+        </ul>
+        <br>
+        <h3>¿Qué puedes hacer en Estugame?</h3>
+
+        <ul>
+          <li>Participar en encuestas sobre tus videojuegos favoritos</li>
+          <li>Ganar recompensas increíbles</li>
+          <li>Conocer a otros gamers de todo el mundo</li>
+          <li>Compartir tus opiniones y ayudar a crear un futuro mejor para los gamers</li>
+        </ul>
+        <br>
+
+        <h3>¿Cómo funciona Estugame?</h3>
+        <ul>
+          <li><h3>Titularidad del sitio web: Stugame</h3></li>
+          <li><h3>Condiciones de uso: Uso responsable del sitio web y sus contenidos.</h3></li>
+          <li><h3>Propiedad intelectual e industrial: Protección de los contenidos del sitio web.</h3></li>
+          <li><h3>Responsabilidad: Limitación de responsabilidad por daños y perjuicios.</h3></li>
+          <li><h3>Enlaces a otros sitios web: Enlaces a sitios web externos.</h3></li>
+          <li><h3>Política de privacidad y cookies: Uso de cookies para mejorar la experiencia del usuario.</h3></li>
+        </ul><br>
+
+        <p>¡Te invitamos a leer nuestros Términos y Condiciones completos para estar al día de todas nuestras políticas!</p><br>
         <div class="container">
-          <h3>Aviso legal</h3>
           <form>
-            <input type="checkbox" id="Extras"> Politica de Privacidad
+            <input type="checkbox" id="Extras"> <a href="legal.html">Politica de Privacidad</a>
           </form>
         </div>
       </div>
@@ -40,7 +77,13 @@
     <section class="contact">
       <div class="container">
         <h2>Contacto</h2>
-        <p><br>¿Tienes alguna pregunta o sugerencia? ¡Contáctanos!<br><br><br><br></p>
+        <p>¿Tienes alguna pregunta, comentario o sugerencia para Estugame?<br><br>
+        ¡No dudes en contactarnos! Nos encantaría saber de ti.<br><br>
+        Correo: <a href="mailto:info@stugame.com">@Estugame</a><br><br>
+        Instagram: <a href="https://www.instagram.com/">@Estu_game</a><br><br>
+        Linkedin: <a href="https://www.linkedin.com/">@Estugame_Es</a><br><br>
+        X: <a href="https://twitter.com/home">@Estu_game_es</a><br><br>
+        </p>
       </div>
     </section>
 
