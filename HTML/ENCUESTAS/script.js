@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function slides()
         $.ajax({
             URL: "index.php",
             method: "POST",
-            data: {votoNgv, votoPst},
+            data: {votoNgv, votoPst, contador},
             success: function(data){
                 console.log(data);
             }
