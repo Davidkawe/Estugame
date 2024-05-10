@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function slides()
     const totalSlides = slides.length;
     let votoPst = 0;
     let votoNgv = 0;
+    let contador = 0;
 
     function showSlide(index)
     {
@@ -26,9 +27,11 @@ document.addEventListener('DOMContentLoaded', function slides()
         if (event.target.id = 'positiveBtn'){
             votoPst = 1;
             votoNgv = 0;
+            contador++;
         } else if (event.target.id = 'negativeBtn'){
             votoPst = 0;
             votoNgv = 1;
+            contador++;
         }
 
         $.ajax({
