@@ -19,49 +19,79 @@
 
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="script.js"></script>
-
-        <div class="slider-container">
-            <div class="slide" id="slide"> <!--Lo unico que hay que hacer es que cuando pulses el boton cambie el id de la encuesta
-            y hacer un select de cada cosa-->
-                <h1 class="Tipo">Nuevo personaje!!!</h1>
-                <br>
-                <img src="../recursos/Images/Personaje.png">
-                <br>
-                <p class="descripcion">
-                    ¡Conoce a Blaze, el mago ardiente con un toque flamígero en el nuevo juego "Reinos en Llamas"! 
-                    Este hechicero intrépido tiene el don de controlar el fuego como nadie más. Con una túnica de 
-                    tonos rojizos y una mirada chispeante en sus ojos, Blaze es el maestro indiscutible de las llamas.
-                    <br>
-                    ¿Por qué elegir a Blaze? ¡Porque donde hay humo, hay fuego! Su magia incendiaria no solo causa 
-                    estragos en los enemigos, sino que también ilumina incluso las situaciones más oscuras. Ya sea 
-                    desencadenando bolas de fuego devoradoras o creando escudos ardientes, Blaze siempre está listo
-                    para avivar la llama de la victoria.
-                    <br>
-                    La razón detrás de su elección como mago es simple: en un mundo lleno de criaturas místicas y 
-                    desafíos épicos, tener a Blaze en tu equipo no solo te brinda poder, sino que también aporta 
-                    ese toque candente que hace que cada batalla sea emocionante. ¡Así que únete a Blaze, enciende
-                    la aventura y haz que tus enemigos se derritan ante la magia de las llamas!
-                </p>
-            </div>
-
-            <div class="slide" id="slide">
-                <h1 class="Tipo"></h1>
-                <br>
-                <img src="..\recursos\Images\HOOLY GOOLY.jpg">
-                <br>
-                <p class="descripcion">
-                    ¿Qué os parece este atrevido diseño para nuestro próximo juego?
-                    <br>
-                    Hooly es un palomo rapper que va al gim. Pero tiene deudas que pagar, por ello entrará en una competición.
-                </p>
-            </div>
-
+        <?php
+            echo '<div class="slider-container">';
+            session_start();
+            $servername = "localhost";
+            $username = "diego";
+            $password = "diego.m.m";
+            $database = "stugame";
             
-        </div>
+            $conn = new mysqli($servername, $username, $password, $database);
+            if ($conn->connect_error) {
+                die("Conexión fallida: " . $conn->connect_error);
+            }
 
-        <div class="button-container">
-            <button id="positiveBtn" class="button"><h2>A favor</h2></button>
-            <button id="negativeBtn" class="button"><h2>En contra</h2></button>
-        </div>
+            $sql = "SELECT MAX(id) FROM encuesta";
+            $res= $conn->query($sql);
+            if($res-> num_rows==1){
+                while($row = $res->fetch_assoc()){
+                $max=$row['MAX(id)'];
+                }
+            }
+
+            $cont=($_GET['val']);
+            $total= array();
+
+            while($cont<=$max){
+                $sql = "SELECT id FROM encuesta WHERE id = '".$cont."'";
+                $res= $conn->query($sql);
+
+                if($res-> num_rows==1){    
+                    echo '<div class="slide" id="slide"> <!--Lo unico que hay que hacer es que cuando pulses el boton cambie el id de la encuesta
+                    y hacer un select de cada cosa-->';
+
+                    $sql = "SELECT nombre FROM encuesta WHERE id = '".$cont."'";
+                    $res= $conn->query($sql);
+
+                    if($res-> num_rows==1){
+                        while($row = $res->fetch_assoc()){
+                            echo '<h1 class="Tipo">'.$row['nombre'].'</h1><br>';
+                            $sql = "SELECT id FROM encuesta WHERE nombre = '".$row['nombre']."'";
+                            $control = $conn->query($sql);
+
+                            $row = $control->fetch_assoc();
+                            $_SESSION['idenc']= $row['id'];
+                            $total[]= $row['id'];
+                        }
+                    }
+
+                    $sql = "SELECT imagen FROM encuesta WHERE id = '".$cont."'";
+                    $res= $conn->query($sql);
+                    if($res-> num_rows==1){
+                        while($row = $res->fetch_assoc()){
+                            echo '<img src="../EmpresasPage/img/'.$row['imagen'].'"><br>';
+                        }
+                    }
+
+                    $sql = "SELECT texto FROM encuesta WHERE id = '".$cont."'";
+                    $res= $conn->query($sql);
+
+                    if($res-> num_rows==1){
+                        while($row = $res->fetch_assoc()){
+                        echo '<p class="descripcion">'.$row['texto'].'</p></div>';
+                        }
+                    }
+                }
+                $cont+=1;
+            }
+            $_SESSION['idemdef']=($total[($_GET['val'])]);
+
+            echo'</div>
+            <div class="button-container">
+            <button id="positiveBtn" class="button"><a class="start-button" href="validar_insercion_votos.php?index='.$_GET['val'].'"><h2>A favor</h2></a></button>
+                <button id="negativeBtn" class="button"><h2>En contra</h2></button>
+            </div>'; 
+        ?>
     </body>
 </html>

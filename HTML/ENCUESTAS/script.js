@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function slides()
 
     function nextSlide()
     {
-        
         currentSlide = (currentSlide + 1) % totalSlides;
         showSlide(currentSlide);
     }
