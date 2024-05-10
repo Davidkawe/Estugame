@@ -39,6 +39,11 @@
                     <label for="imagen">Imagen de la encuesta:</label>
                     <input type="file" id="imagen" name="imagen" accept="image/*" onchange="mostrarImagen(this)" required>
 
+                    <label for="nombreem">nombre empresa:</label><br>
+                    <input type="text" name="nombreem" id="nombreem"><br>
+
+                    <label for="fecha">fecha limite:</label><br>
+                    <input type="date" name="date" id="date"><br><br><br>
                     
                     <button type="submit">Crear Encuesta</button><br><br>
                 </form>
@@ -58,7 +63,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2024 Nombre de tu empresa</p>
+            <p>&copy; 2024 Estugame</p>
         </footer>
     </body>
 </html>
