@@ -9,19 +9,25 @@
 
     <body>
         <script src="script.js"></script>
+
         <div class="container" id="container">
             <div class="form-container empresas-container">
                 <form action="validar_insercion_empresa.php" method="post">
                     <h1>Crea tu Empresa</h1>
-                    <input type="text" placeholder="Nombre de Empresa" id="NomEmpresa" name="nombreem" required/>
-                    <input type="email" id="email" placeholder="Email" name="mailem" required/>
+                    <div class="junto">
+                        <input type="text" placeholder="Nombre de Empresa" id="NomEmpresa" name="nombreem" class="identidad" required/>
+                        <input type="text" placeholder="NIF" id="nif" name="nif" required/>
+                    </div>
+                    <div class="junto">
+                        <input type="email" id="email" placeholder="Email" name="mailem" class="identidad" required/>
+                        <input type="text" placeholder="Telefono" id="telefono" name="telefonoem" required/>
+                    </div>
                     <input type="password" placeholder="Contraseña" name="contrasenaem" required/>
-                    <input type="text" placeholder="Telefono" id="telefono" name="telefonoem" required/>
-                    <input type="text" placeholder="NIF" id="nif" name="nif" required/>
                     <button onclick="redireccionar()" id="RegEmpresa">Registrate</button>
                     <p>¿Ya tienes cuenta? <a class="Registrate" href="../Usuario/login.html">Inicia Sesión</a></p>
                 </form>
             </div>
+
             <div class="form-container sign-in-container">
                 <form action="validar_insercion.php" method="post">
                     <h1>Registrate</h1>
@@ -31,7 +37,8 @@
                     </div>
                     <div class="junto">
                         <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="identidad" required/>
-                        <input type="text" placeholder="Apellido" id="apellido" name="primApellido" required/>
+                        <input type="text" placeholder="1º Apellido" id="apellido" name="primApellido" class="identidad" required/>
+                        <input type="text" placeholder="2º Apellido" id="apellido" name="secApellido" required/>
                     </div>
                     <div class="B">
                         <input type="email" id="email" placeholder="Email" class="ba" name="mail" required/>
@@ -58,6 +65,7 @@
                 </div>
             </div>
         </div>
+
         <section>
             <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
             <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
